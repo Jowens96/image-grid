@@ -20,6 +20,67 @@ body {
   margin: 0;
 }
 
-section:first-child{
+img {
+  width: 100%;
+  display: block;
+}
+
+img:nth-child(2),
+img:last-child {
+  display: none;
+}
+
+@media only screen and (min-width: 25em) {
+
+  img:nth-child(2),
+  img:last-child {
+    display: inline;
+  }
+
+img:nth-child(n+2) {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 38em) {
+
+  img:last-child {
+    display: none;
+  }
+
+  img:nth-child(n+2) {
+    width: 33.333%;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  section {
+    width: 100.1%;
+  }
+
+  img:first-child {
+    width: 66.6%;
+    float:left;
+  }
+
+  img:nth-child(n+2) {
+    width: 33.3%;
+
+  }
+
+  img:last-child {
+    display: inline;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  section {
+    width: 100%;
+  }
 
 }
